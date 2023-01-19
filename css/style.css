@@ -48,6 +48,7 @@ a {
   box-sizing: border-box;
   height: 100%;
   margin-bottom: 1.5rem;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
 .data-header {
@@ -67,34 +68,26 @@ a {
   color: rgba(75, 60, 54, 0.85);
 }
 
-.data-data {
-  display: none;
-}
-
-.data-data {
-  display: initial;
-}
-
 .data-data p {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 45px;
 }
 
-.data-time-remove {
-  display: none;
-}
-
-.data-time-remove {
+.data-timer {
   display: flex;
-  justify-content: space-between;
-  align-self: end;
+  justify-content: center;
 }
 
-.data-time-remove .timer {
+.data-timer .timer {
   font-weight: bold;
   font-size: 2rem;
   color: #55433d;
+}
+
+.data-timer span {
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 800px) {
@@ -108,14 +101,20 @@ a {
   .header h2 {
     font-size: 1.5rem;
   }
+  .data-timer {
+    gap: 6px;
+  }
 }
 
 @media (max-width: 600px) {
-  .data-time-remove {
-    flex-direction: column;
-    gap: 1rem;
+  .data-timer {
+    justify-content: flex-start;
   }
-  .data-time-remove .timer {
-    font-size: 1.3rem;
+  .data-timer .timer {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .data-timer .timer span {
+    display: block;
   }
 }
